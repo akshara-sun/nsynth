@@ -75,7 +75,7 @@ export default function Synth () {
 
   // Keyboard event listener using custom react hook: useKey - Solution 2
   // let alphabet = ["a", "s", "d", "f", "g", "h", "j", "k"]
-
+  // needs more testing
   // function keyboardShortcut(event) {
   //   if (event.key === 'a') {
   //     playNote('C4');
