@@ -51,63 +51,26 @@ export default function Synth () {
 
   // Keyboard Event listener - Solution 1
 
-  // document.addEventListener('keydown', (event) => {
-  //   if (event.key === 'a') {
-  //     playNote('C4');
-  //   } else if (event.key === 's') {
-  //     playNote('D4')
-  //   } else if (event.key === 'd') {
-  //     playNote('E4')
-  //   } else if (event.key === 'f') {
-  //     playNote('F4')
-  //   } else if (event.key === 'g') {
-  //       playNote('G4')
-  //   } else if (event.key === 'h') {
-  //       playNote('A4')
-  //   } else if (event.key === 'j') {
-  //       playNote('B4')       
-  //   } else if (event.key === 'k') {
-  //       playNote('C5') 
-  //   } else {
-  //     alert("Invalid note")
-  //   }
-  // })
-
-  // Keyboard event listener using custom react hook: useKey - Solution 2
-  // let alphabet = ["a", "s", "d", "f", "g", "h", "j", "k"]
-  // needs more testing
-  // function keyboardShortcut(event) {
-  //   if (event.key === 'a') {
-  //     playNote('C4');
-  //   } else if (event.key === 's') {
-  //     playNote('D4')
-  //   } else if (event.key === 'd') {
-  //     playNote('E4')
-  //   } else if (event.key === 'f') {
-  //     playNote('F4')
-  //   } else if (event.key === 'g') {
-  //       playNote('G4')
-  //   } else if (event.key === 'h') {
-  //       playNote('A4')
-  //   } else if (event.key === 'j') {
-  //       playNote('B4')       
-  //   } else if (event.key === 'k') {
-  //       playNote('C5') 
-  //   } else {
-  //     alert("Invalid note")
-  //   }
-  // }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'a') {
+      playNote('C4');
+    } else if (event.key === 's') {
+      playNote('D4')
+    } else if (event.key === 'd') {
+      playNote('E4')
+    } else if (event.key === 'f') {
+      playNote('F4')
+    } else if (event.key === 'g') {
+        playNote('G4')
+    } else if (event.key === 'h') {
+        playNote('A4')
+    } else if (event.key === 'j') {
+        playNote('B4')       
+    } else if (event.key === 'k') {
+        playNote('C5') 
+    } 
+  })
   
-  // useKey([alphabet[0]], keyboardShortcut);
-  // useKey([alphabet[1]], keyboardShortcut);
-  // useKey([alphabet[2]], keyboardShortcut);
-  // useKey([alphabet[3]], keyboardShortcut);
-  // useKey([alphabet[4]], keyboardShortcut);
-  // useKey([alphabet[5]], keyboardShortcut);
-  // useKey([alphabet[6]], keyboardShortcut);
-  // useKey([alphabet[7]], keyboardShortcut);
-
-
   return (
     <>
     <h1 className="font-mono text-center text-6xl p-10">NSynth</h1>
