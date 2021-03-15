@@ -52,25 +52,84 @@ export default function Synth () {
   // Keyboard Event listener - Solution 1
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'a') {
-      playNote('C4');
-    } else if (event.key === 's') {
-      playNote('D4')
-    } else if (event.key === 'd') {
-      playNote('E4')
-    } else if (event.key === 'f') {
-      playNote('F4')
-    } else if (event.key === 'g') {
-        playNote('G4')
-    } else if (event.key === 'h') {
-        playNote('A4')
-    } else if (event.key === 'j') {
-        playNote('B4')       
-    } else if (event.key === 'k') {
-        playNote('C5') 
+    switch (event.key) {
+      case "q":
+        playNote('C4');
+        break;
+      case "2":
+        playNote('C#4');
+        break;
+      case "w":
+        playNote('D4');
+        break;
+      case "3":
+        playNote('D#4');
+        break;
+      case "e":
+        playNote('E4');
+        break;
+      case "r":
+        playNote('F4');
+        break;
+      case "5":
+        playNote('F#4');
+        break;
+      case "t":
+        playNote('G4');
+        break;
+      case "6":
+        playNote('G#4');
+        break;
+      case "y":
+        playNote('A4');
+        break;
+      case "7":
+        playNote('A#4');
+        break;
+      case "u":
+        playNote('B4');
+        break;
+      case "i":
+        playNote('C5')
+        break;
+      case "9":
+        playNote('C#5');
+        break;
+      case "o":
+        playNote('D5');
+        break;
+      case "0":
+        playNote('D#5');
+        break;
+      case "p":
+        playNote('E5');
+        break;
+      case "[":
+        playNote('F5');
+        break;
+      case "=":
+        playNote('F#5');
+        break;
+      case "]":
+        playNote('G5');
+        break;
+      case "a":
+        playNote('G#5');
+        break;
+      case "s":
+        playNote('A5');
+        break;
+      case "d":
+        playNote('A#5');
+        break;
+      case "f":
+        playNote('B5');
+        break;
+      default:
+        return;
     } 
   })
-  
+//use forEach
   return (
     <>
     <h1 className="font-mono text-center text-6xl p-10">NSynth</h1>
