@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Synth from './Synth';
+import Sequencer from './sequencer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Synth />
+    <Sequencer />
   </React.StrictMode>,
   document.getElementById('root')
 );
