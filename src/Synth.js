@@ -1,5 +1,5 @@
 import React from "react";
-import "./Synth.css";
+import "./styles.css";
 import * as Tone from "tone";
 // import useKey from "@rooks/use-key";
 
