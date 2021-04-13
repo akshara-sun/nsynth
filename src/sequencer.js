@@ -17,23 +17,18 @@ export default function Sequencer () {
     const makeSound = (synthType) => {
         sequencerSounds[synthType].triggerAttackRelease("C3", "8n")
     }
-
-    function preset1 () {
-        new Tone.Sequence((time, note) => {
-            Object.values(sequencerSounds).triggerAttackRelease(note, 0.1, time);
-            // subdivisions are given as subarrays
-        }, ["C4", ["E4", "D4", "E4"], "G4", ["A4", "G4"]].start)
-        Tone.Transport.start()
-    }
     
-
+   // add preset for play button
+   // style play button
+   
     return (
         <>
-         <h1 className="font-mono text-center text-6xl p-10">NSequencer</h1>
+        <h1 className="font-mono text-center text-6xl p-10">NSequencer</h1>
         <div className="grid grid-flow-col grid-cols-3 grid-rows-2 justify-items-stretch gap-4 m-10">
-            {Object.keys(sequencerSounds).map(sound => <button onClick={() => makeSound(sound)}className="text-center font-mono font-bold border-2 border-black bg-yellow-800 p-20 hover:bg-black hover:border-yellow-100 hover:text-white focus:outline-none shadow-xl">{sound}</button>)}
+            {Object.keys(sequencerSounds).map(sound => <button onClick={() => makeSound(sound)}className="text-center font-mono font-bold border-2 border-black bg-yellow-800 p-10 hover:bg-black hover:border-yellow-100 hover:text-white focus:outline-none shadow-xl">{sound}</button>)}
         </div>
-        <IonIcon onClick={() => {preset1()}} className="ml-20 bg-purple hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" icon={playSharp} size="large"/> 
+        <IonIcon className="text-center bg-purple hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" icon={playSharp} size="large"/> 
+        <h3 className="font-mono text-center text-sm p-10">All sounds from Tone.js!</h3>
         </>
     )
 }
