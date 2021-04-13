@@ -15,7 +15,7 @@ export default function Sequencer () {
     }
 
     const makeSound = (synthType) => {
-        sequencerSounds[synthType].triggerAttackRelease("C3", "8n")
+        sequencerSounds[synthType].triggerAttackRelease("C3", "8n");
     }
     
    // add preset for play button

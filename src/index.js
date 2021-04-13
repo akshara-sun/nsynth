@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sequencer from './sequencer';
+import Sequencer from './Sequencer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
