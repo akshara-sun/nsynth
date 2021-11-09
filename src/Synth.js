@@ -1,8 +1,8 @@
 import React from "react";
 import "./Synth.css";
 import * as Tone from "tone";
-import OctaveUp from "./octave-up";
-import OctaveDown from "./octave-down";
+// import OctaveUp from "./octave-up";
+// import OctaveDown from "./octave-down";
 
 //Synth component with black and white keys
 export default function Synth () {
