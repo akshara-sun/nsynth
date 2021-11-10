@@ -23,16 +23,16 @@ export default function pianoKeys() {
 
   let keyboardShortcuts = Object.keys(keyboard);
 
-  //function that looks through object values and filters out the white keys and black keys
+  //separating values of object into array of whitekeys and blackeys
   let keyNotes = Object.values(keyboard);
   let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
 
-  let blackKeysSet1 = keyNotes.filter((keys) => keys.includes("C#"));
-  blackKeysSet1.push(keyNotes.filter((keys) => keys.includes("D#")));
+  let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
+  twoBlackKeys.push(keyNotes.filter((keys) => keys.includes("D#")));
 
-  let blackKeysSet2 = keyNotes.filter((keys) => keys.includes("F#"));
-  blackKeysSet2.push(keyNotes.filter((keys) => keys.includes("G#")));
-  blackKeysSet2.push(keyNotes.filter((keys) => keys.includes("A#")));
+  let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
+  threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("G#")));
+  threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("A#")));
 
   //creating piano and connecting to main output source
   const piano = new Tone.Synth().toDestination();
@@ -57,20 +57,20 @@ export default function pianoKeys() {
         ))}
       </div>
       <div className="flex justify-center relative space-x-4 -m-60 mr-2">
-        {blackKeysSet1.map((note) => (
+        {twoBlackKeys.map((note) => (
           <button
             className="ml-44 space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
-            id="blackKeys"
+            id="twoBlackKeys"
             onClick={() => playNote(note)}
           >
             {note}
           </button>
         ))}
         <div className="flex justify-start pl-16 space-x-4">
-          {blackKeysSet2.map((note) => (
+          {threeBlackKeys.map((note) => (
             <button
               className="space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
-              id="blackKeys"
+              id="threeBlackKeys"
               onClick={() => playNote(note)}
               >
               {note}
