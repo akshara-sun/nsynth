@@ -1,49 +1,29 @@
-
 import React from "react";
-import { useEffect , useRef} from "react";
-import "./Synth.css";
+import { keyboard } from "./keyboard";
+import "./synth.css";
 import * as Tone from "tone";
 
-export default function pianoKeys() {
-  let keyboard = {
-    "a": "C4",
-    "w": "C#4",
-    "s": "D4",
-    "e": "D#4",
-    "d": "E4",
-    "f": "F4",
-    "t": "F#4",
-    "g": "G4",
-    "y": "G#4",
-    "h": "A4",
-    "u": "A#4",
-    "j": "B4",
-    "k": "C5",
-  };
+export default function Synth() {
+    //separating values of object into array of whitekeys and blackeys
+    let keyNotes = Object.values(keyboard);
+    let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
   
-  let keyboardShortcuts = Object.keys(keyboard);
+    let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
+    twoBlackKeys.push(keyNotes.filter((keys) => keys.includes("D#")));
+    twoBlackKeys = twoBlackKeys.flat();
   
-  //separating values of object into array of whitekeys and blackeys
-  let keyNotes = Object.values(keyboard);
-  let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
-  
-  let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
-  twoBlackKeys.push(keyNotes.filter((keys) => keys.includes("D#")));
-  twoBlackKeys = twoBlackKeys.flat();
-  
-  let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
-  threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("G#")));
-  threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("A#")));
-  threeBlackKeys = threeBlackKeys.flat();
-  
-  
+    let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
+    threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("G#")));
+    threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("A#")));
+    threeBlackKeys = threeBlackKeys.flat();
+
   //creating piano and connecting to main output source
   const piano = new Tone.Synth().toDestination();
 
   //function that takes care of playing a specific sound
   const playNote = (note) => {
     piano.triggerAttackRelease(`${note}`, "8n");
-  };  
+  };
 
   return (
     <>
@@ -75,7 +55,7 @@ export default function pianoKeys() {
               className="space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
               id="threeBlackKeys"
               onClick={() => playNote(note)}
-              >
+            >
               {note}
             </button>
           ))}
