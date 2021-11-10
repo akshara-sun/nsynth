@@ -13,12 +13,13 @@ This project was inspired by the AKAI MPK MINI MKII. I want to challenge myself 
 
 # Features
 - ✅ Mini piano (1 octave) 
-- 📌 Drum Pads
-- 🔨 Octave Toggle (go up or down the octave)
-- 📌 Chord recognition 
-- 🔨 Sequencer 
-- 📌 Regular Size Piano
 - 📌 Music Notation
+- 📌 Octave Toggle (go up or down the octave)
+- 📌 Drum Pads
+- 📌 Chord recognition 
+- 📌 Sequencer 
+- 📌 Regular Size Piano
+
 
 # Frameworks/Tools
 - [Tailwind CSS](https://tailwindcss.com/)

@@ -10,13 +10,11 @@ export default function Synth() {
     let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
   
     let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
-    twoBlackKeys.push(keyNotes.filter((keys) => keys.includes("D#")));
-    twoBlackKeys = twoBlackKeys.flat();
+    twoBlackKeys = twoBlackKeys.concat(keyNotes.filter((keys) => keys.includes("D#")));
   
     let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
-    threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("G#")));
-    threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("A#")));
-    threeBlackKeys = threeBlackKeys.flat();
+    threeBlackKeys = threeBlackKeys.concat(keyNotes.filter((keys) => keys.includes("G#")));
+    threeBlackKeys = threeBlackKeys.concat(keyNotes.filter((keys) => keys.includes("A#")));
 
   //creating piano and connecting to main output source
   const piano = new Tone.Synth().toDestination();
