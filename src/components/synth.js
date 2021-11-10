@@ -1,3 +1,4 @@
+//Main piano components 
 import React from "react";
 import { keyboard } from "./keyboard";
 import "./synth.css";

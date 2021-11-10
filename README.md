@@ -20,7 +20,8 @@ This project was inspired by the AKAI MPK MINI MKII. I want to challenge myself 
 - 📌 Regular Size Piano
 - 📌 Music Notation
 
-# Frameworks
+# Frameworks/Tools
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind Components](https://tailwindcomponents.com/)
 - [Tone JS](https://tonejs.github.io/)
 
