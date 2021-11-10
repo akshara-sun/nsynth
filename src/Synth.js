@@ -20,20 +20,23 @@ export default function pianoKeys() {
     "j": "B4",
     "k": "C5",
   };
-
+  
   let keyboardShortcuts = Object.keys(keyboard);
-
+  
   //separating values of object into array of whitekeys and blackeys
   let keyNotes = Object.values(keyboard);
   let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
-
+  
   let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
   twoBlackKeys.push(keyNotes.filter((keys) => keys.includes("D#")));
-
+  twoBlackKeys = twoBlackKeys.flat();
+  
   let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
   threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("G#")));
   threeBlackKeys.push(keyNotes.filter((keys) => keys.includes("A#")));
-
+  threeBlackKeys = threeBlackKeys.flat();
+  
+  
   //creating piano and connecting to main output source
   const piano = new Tone.Synth().toDestination();
 
