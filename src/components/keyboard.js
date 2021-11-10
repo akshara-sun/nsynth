@@ -1,4 +1,4 @@
-//Keyboard object
+//Keyboard object - maps laptop keys to notes on the keyboard
 export const keyboard = {
     a: "C4",
     w: "C#4",
