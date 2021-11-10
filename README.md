@@ -1,5 +1,5 @@
 # About
-This project was inspired by the AKAI MPK MINI MKII. I want to challenge myself to not just build a regular piano but a workstation + an instrument. 
+Make music from your laptop from anywhere, anytime. 
 
 ### Legend 
 - 📌 To-Do
@@ -26,3 +26,7 @@ This project was inspired by the AKAI MPK MINI MKII. I want to challenge myself 
 - [Tailwind Components](https://tailwindcomponents.com/)
 - [Tone JS](https://tonejs.github.io/)
 
+#### This project was inspired by:
+- [Bebot](http://www.normalware.com/)
+- [Funklet](https://funklet.com/superstition/)
+- [Isomorphic Keyboard](https://www.lumatone.io/)
