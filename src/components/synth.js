@@ -1,12 +1,12 @@
 //Main piano components 
 import React from "react";
-import { keyboard } from "./keyboard";
+import { miniKeyboard } from "./miniKeyboard";
 import "./synth.css";
 import * as Tone from "tone";
 
 export default function Synth() {
     //separating values of object into array of whitekeys and blackeys
-    let keyNotes = Object.values(keyboard);
+    let keyNotes = Object.values(miniKeyboard);
     let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
   
     let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));

@@ -1,5 +1,5 @@
 //Keyboard object - maps laptop keys to notes on the keyboard
-export const keyboard = {
+export const miniKeyboard = {
     a: "C4",
     w: "C#4",
     s: "D4",
