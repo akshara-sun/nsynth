@@ -75,7 +75,7 @@ export default function Synth() {
       <div className="flex justify-center relative sm:mt-24 md:mt-44">
         {whiteKeys.map((note) => (
           <button
-            className="keys relative text-center font-mono font-bold bg-white border border-t-8 border-black rounded-b-lg w-16 pt-52 hover:bg-gray-500 focus:outline-none"
+            className="keys relative text-center font-mono font-bold bg-white border border-t-8 border-black rounded-b-lg w-16 pt-52"
             id="whitekeys"
             onClick={() => playNote(note)}
           >
@@ -86,7 +86,7 @@ export default function Synth() {
       <div className="flex justify-center relative space-x-4 -m-60 mr-2">
         {twoBlackKeys.map((note) => (
           <button
-            className="keys ml-44 space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
+            className="keys ml-44 space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40"
             id="twoBlackKeys"
             onClick={() => playNote(note)}
           >
@@ -96,7 +96,7 @@ export default function Synth() {
         <div className="flex justify-start pl-16 space-x-4">
           {threeBlackKeys.map((note) => (
             <button
-              className="keys space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
+              className="keys space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40"
               id="threeBlackKeys"
               onClick={() => playNote(note)}
             >
