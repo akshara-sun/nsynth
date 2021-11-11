@@ -24,50 +24,50 @@ export default function Synth() {
   };
 
   //Keyboard Event Listeners
-  document.addEventListener("keypress", (event) => {
-    // eslint-disable-next-line default-case
-    switch (event.key) {
-      case "a":
-        playNote('C4');
-        break;
-      case "w":
-        playNote('C#4');
-        break;
-      case "s":
-        playNote('D4');
-        break;
-      case "e":
-        playNote('D#4');
-        break;
-      case "d":
-        playNote('E4');
-        break;
-      case "f":
-        playNote('F4');
-        break;
-      case "t":
-        playNote('F#4');
-        break;
-      case "g":
-        playNote('G4');
-        break;
-      case "y":
-        playNote('G#4');
-        break;
-      case "h":
-        playNote('A4');
-        break;
-      case "u":
-        playNote('A#4');
-        break;
-      case "j":
-        playNote('B4');
-        break;
-      case "k":
-        playNote('C5')
-        break;
-  } 
-})
+    document.addEventListener("keydown", (event) => {
+      // eslint-disable-next-line default-case
+      switch (event.key) {
+        case "a":
+          playNote('C4');
+          break;
+        case "w":
+          playNote('C#4');
+          break;
+        case "s":
+          playNote('D4');
+          break;
+        case "e":
+          playNote('D#4');
+          break;
+        case "d":
+          playNote('E4');
+          break;
+        case "f":
+          playNote('F4');
+          break;
+        case "t":
+          playNote('F#4');
+          break;
+        case "g":
+          playNote('G4');
+          break;
+        case "y":
+          playNote('G#4');
+          break;
+        case "h":
+          playNote('A4');
+          break;
+        case "u":
+          playNote('A#4');
+          break;
+        case "j":
+          playNote('B4');
+          break;
+        case "k":
+          playNote('C5')
+          break;
+    } 
+  })
 
   return (
     <>
@@ -75,7 +75,7 @@ export default function Synth() {
       <div className="flex justify-center relative sm:mt-24 md:mt-44">
         {whiteKeys.map((note) => (
           <button
-            className="relative text-center font-mono font-bold bg-white border border-t-8 border-black rounded-b-lg w-16 pt-52 hover:bg-gray-500 shadow-2xl focus:outline-none"
+            className="keys relative text-center font-mono font-bold bg-white border border-t-8 border-black rounded-b-lg w-16 pt-52 hover:bg-gray-500 focus:outline-none"
             id="whitekeys"
             onClick={() => playNote(note)}
           >
@@ -86,7 +86,7 @@ export default function Synth() {
       <div className="flex justify-center relative space-x-4 -m-60 mr-2">
         {twoBlackKeys.map((note) => (
           <button
-            className="ml-44 space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
+            className="keys ml-44 space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
             id="twoBlackKeys"
             onClick={() => playNote(note)}
           >
@@ -96,7 +96,7 @@ export default function Synth() {
         <div className="flex justify-start pl-16 space-x-4">
           {threeBlackKeys.map((note) => (
             <button
-              className="space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
+              className="keys space-x-4 text-center font-mono font-bold text-white bg-black rounded-b-lg w-12 pt-40 hover:bg-gray-500 focus:outline-none shadow-2xl"
               id="threeBlackKeys"
               onClick={() => playNote(note)}
             >

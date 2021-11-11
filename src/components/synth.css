@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.keys {
+    box-shadow: 0 8px #523e3e;
+  }
+.keys:hover {background-color: #91b7ba}
+
+.keys:active {
+    background-color: #6b878a;
+    box-shadow: 0 5px #666;
+}
+
+
