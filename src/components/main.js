@@ -6,15 +6,14 @@ import * as Tone from "tone";
 
 export default function Synth() {
     //separating values of object into array of whitekeys and blackeys
-    let keyNotes = Object.values(miniKeyboard);
-    let whiteKeys = keyNotes.filter((keys) => !keys.includes("#"));
+    let whiteKeys = miniKeyboard.filter((keys) => !keys.includes("#"));
   
-    let twoBlackKeys = keyNotes.filter((keys) => keys.includes("C#"));
-    twoBlackKeys = twoBlackKeys.concat(keyNotes.filter((keys) => keys.includes("D#")));
+    let twoBlackKeys = miniKeyboard.filter((keys) => keys.includes("C#"));
+    twoBlackKeys = twoBlackKeys.concat(miniKeyboard.filter((keys) => keys.includes("D#")));
   
-    let threeBlackKeys = keyNotes.filter((keys) => keys.includes("F#"));
-    threeBlackKeys = threeBlackKeys.concat(keyNotes.filter((keys) => keys.includes("G#")));
-    threeBlackKeys = threeBlackKeys.concat(keyNotes.filter((keys) => keys.includes("A#")));
+    let threeBlackKeys = miniKeyboard.filter((keys) => keys.includes("F#"));
+    threeBlackKeys = threeBlackKeys.concat(miniKeyboard.filter((keys) => keys.includes("G#")));
+    threeBlackKeys = threeBlackKeys.concat(miniKeyboard.filter((keys) => keys.includes("A#")));
 
   //creating piano and connecting to main output source
   const piano = new Tone.Synth().toDestination();
@@ -23,6 +22,52 @@ export default function Synth() {
   const playNote = (note) => {
     piano.triggerAttackRelease(`${note}`, "8n");
   };
+
+  //Keyboard Event Listeners
+  document.addEventListener("keypress", (event) => {
+    // eslint-disable-next-line default-case
+    switch (event.key) {
+      case "a":
+        playNote('C4');
+        break;
+      case "w":
+        playNote('C#4');
+        break;
+      case "s":
+        playNote('D4');
+        break;
+      case "e":
+        playNote('D#4');
+        break;
+      case "d":
+        playNote('E4');
+        break;
+      case "f":
+        playNote('F4');
+        break;
+      case "t":
+        playNote('F#4');
+        break;
+      case "g":
+        playNote('G4');
+        break;
+      case "y":
+        playNote('G#4');
+        break;
+      case "h":
+        playNote('A4');
+        break;
+      case "u":
+        playNote('A#4');
+        break;
+      case "j":
+        playNote('B4');
+        break;
+      case "k":
+        playNote('C5')
+        break;
+  } 
+})
 
   return (
     <>
