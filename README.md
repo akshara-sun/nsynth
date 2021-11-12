@@ -27,6 +27,7 @@ Make music from your laptop from anywhere, anytime.
 - [Tone JS](https://tonejs.github.io/)
 
 #### This project was inspired by:
+- [CSS Piano](https://codepen.io/zastrow/pen/oDBki)
 - [Bebot](http://www.normalware.com/)
 - [Funklet](https://funklet.com/superstition/)
 - [Isomorphic Keyboard](https://www.lumatone.io/)
