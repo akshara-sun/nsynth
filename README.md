@@ -7,7 +7,8 @@ Make music from your laptop from anywhere, anytime.
 - ✅ Completed 
 
 # Current Working Version 
-<img width="1680" alt="Screen Shot 2021-11-09 at 7 16 17 PM" src="https://user-images.githubusercontent.com/49100882/141043784-f68f1398-4684-47c9-ba8a-a88b4eec8707.png">
+<img width="1678" alt="Screen Shot 2021-11-12 at 3 14 08 PM" src="https://user-images.githubusercontent.com/49100882/141594106-9f33c2e2-e629-4d5c-bab5-03cd08dd4c91.png">
+
 
 #### Click [here](https://www.figma.com/file/6f2OhzhdW3XxFVZvEN8sMo/NSynth?node-id=0%3A1) to view the Figma Prototype!
 
