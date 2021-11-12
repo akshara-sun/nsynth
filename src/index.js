@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Synth from './components/main';
+import Synth from './components/piano';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
