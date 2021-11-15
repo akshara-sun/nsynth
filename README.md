@@ -26,6 +26,7 @@ Make music from your laptop from anywhere, anytime.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Components](https://tailwindcomponents.com/)
 - [Tone JS](https://tonejs.github.io/)
+- [IonIcons](https://ionic.io/ionicons/usage)
 
 #### This project was inspired by:
 - [CSS Piano](https://codepen.io/zastrow/pen/oDBki)
