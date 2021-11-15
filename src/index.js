@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Synth from './components/piano';
+import Piano from './components/piano';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Synth />
+    <Piano />
   </React.StrictMode>,
   document.getElementById('root')
 );
