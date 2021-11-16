@@ -3,6 +3,7 @@ import React from "react";
 import { notes } from "./notes";
 import "./synth.css";
 import * as Tone from "tone";
+import Dropdown from "./dropdown-menu";
 
 export default function Piano() {
     //separating values of object into array of whitekeys and blackeys
@@ -25,7 +26,8 @@ export default function Piano() {
 
   return (
     <>
-      <h1 className="font-serif text-center text-6xl p-10">NSynth</h1>
+      <h1 className="font-serif text-center text-6xl pt-10 pb-4">NSynth</h1>
+      <h3 className="font-serif text-center text-l">Make music from anywhere, anytime.</h3>
       <div className="container mx-auto">
         <div className="flex justify-center relative sm:mt-24 md:mt-44">
           {whiteKeys.map((note) => (
@@ -61,6 +63,7 @@ export default function Piano() {
           </div>
         </div>
       </div>
+      <Dropdown />
     </>
   );
 }
