@@ -9,11 +9,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Dropdown() {
+export default function Dropdown(props) {
   return (
     <Menu as="div" className="relative inline-block float-right text-center mr-96 mt-16">
       <div>
-        <Menu.Button className="justify-end rounded-md border bg-gray-300 border-gray-300 shadow-sm px-4 py-2 text-lg font-serif text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">
+        <Menu.Button name={props} className="justify-end rounded-md border bg-gray-300 border-gray-300 shadow-sm px-4 py-2 text-lg font-serif text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100">
           Tone Bank
           <ion-icon name="caret-down" className="justify-items-center" aria-hidden="true" size="small"></ion-icon>
         </Menu.Button>

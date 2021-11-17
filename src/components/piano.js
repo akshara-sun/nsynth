@@ -63,7 +63,7 @@ export default function Piano() {
           </div>
         </div>
       </div>
-      <Dropdown />
+      <Dropdown name="Tone Bank"/>
     </>
   );
 }
