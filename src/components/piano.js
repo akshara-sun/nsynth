@@ -1,9 +1,10 @@
-//Main piano components 
+// Main piano components 
 import React from "react";
 import { notes } from "./notes";
-import "./synth.css";
+import "./styles.css";
 import * as Tone from "tone";
-import Dropdown from "./dropdown-menu";
+import InstrumentTypes from "./instrument-types";
+import ToneBank from "./tone-bank";
 
 export default function Piano() {
     //separating values of object into array of whitekeys and blackeys
@@ -63,7 +64,11 @@ export default function Piano() {
           </div>
         </div>
       </div>
-      <Dropdown name="Tone Bank"/>
+      <div className="dropdown grid grid-rows-1 grid-flow-col float-right mr-64 mt-20 gap-4">
+        <InstrumentTypes/>
+        <ToneBank />
+      </div>
+      
     </>
   );
 }
