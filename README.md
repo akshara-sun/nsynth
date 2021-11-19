@@ -1,5 +1,5 @@
 # About
-Make music from your laptop from anywhere, anytime. 
+Making music, simplified. 
 
 ### Legend 
 - 📌 To-Do
@@ -9,20 +9,24 @@ Make music from your laptop from anywhere, anytime.
 # Current Working Version 
 <img width="1678" alt="Screen Shot 2021-11-12 at 3 14 08 PM" src="https://user-images.githubusercontent.com/49100882/141594106-9f33c2e2-e629-4d5c-bab5-03cd08dd4c91.png">
 
-
-#### Click [here](https://www.figma.com/file/6f2OhzhdW3XxFVZvEN8sMo/NSynth?node-id=0%3A1) to view the Figma Prototype!
-
 # Features
-- ✅ Mini piano (1 octave) 
-- 📌 Music Notation
-- 📌 Octave Toggle (go up or down the octave)
-- 📌 Drum Pads
-- 📌 Chord recognition 
-- 📌 Sequencer 
-- 📌 Regular Size Piano
+- 🔨 Interactive mini piano
+- 📌 Octave toggling 
+- 📌 Chord Library 
+- 📌 Tones Library/Bank 
+- 📌 Instruments Library 
+- 📌 Drum Machine/Sequencer
+- 📌 Waveform display when sounds are played 
+- 📌 Notation display when sounds are played
+- 📌 Surprise feature!
 
+# Incremental Deliverables
+- Phase 1: Mini keyboard with tone bank and chord library.
+- Phase 2: Drum Machine and Instrument Library
+- Phase 3: Waveform Display 
+- Phase 4: Notation display 
 
-# Frameworks/Tools
+# Frameworks/Tools/Libraries
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Components](https://tailwindcomponents.com/)
 - [Tone JS](https://tonejs.github.io/)
